@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" );
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;1,700&display=swap" );
+
+
+.user-message {
+    text-align: center;
+    margin-right: 780px;
+    font-family: Kanit;
+    background-color: wheat;
+}
+
+.user-name {
+text-decoration: solid;
+}
+
+
+
+
+

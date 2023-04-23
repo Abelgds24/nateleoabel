@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" );
+html, body {
+	height: 100%;
+	margin: 0;
+	background-image: linear-gradient(to bottom right, #8D7B68, #8D7B68, #8D7B68, #8D7B68, #8D7B68, #8D7B68, #8D7B68, #8D7B68, #8D7B68, #8D7B68, #8D7B68, #8D7B68);
+}
+
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  font-family: Kanit;
+  font-size: 80px;
+  color: #F1DEC9;
+}
+
+
+.pic {
+width: 150px;
+height: 150px;
+text-align: center;
+display: flex;
+margin-left: 650px;
+}
+
+
+
+
+

@@ -2,7 +2,7 @@ import React from "react";
 import GoogleSignin from "../img/btn_google_signin_dark_pressed_web.png";
 import { auth } from "../firebase";
 import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
-import "./App.css";
+import "./Welcome.css";
 
 const Welcome = () => {
   const googleSignIn = () => {
@@ -11,13 +11,20 @@ const Welcome = () => {
 };
 
   return (
+    <div>
     <main className="welcome">
-      <h2>Welcome to Coffee Hub.</h2>
-      <img class='love' src='https://www.nicepng.com/png/detail/0-9700_drinking-coffee-clipart-coffee-clipart.png'></img>
-      <p>Sign in with Google to join the disscussion!</p>
-      
+     <h1>Welcome To Coffee Hub</h1>
+     
+     <img class='pic' src='https://clipartix.com/wp-content/uploads/2016/04/Coffee-clip-art-free-clipart-images.png'></img>
+
+    
     </main>
+  
+    </div>
+    
   );
 };
 
 export default Welcome;
+
+

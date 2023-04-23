@@ -1,14 +1,15 @@
-
 import React, { useState } from "react";
 import { auth, db } from "../firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import "./SendMessage.css";
 
-const SendMessage = ({ scroll }) => {
+const SendMessage = ({}) => {
   const [message, setMessage] = useState("");
+  const bottomRef = React.useRef(); // add a reference to the bottom of the page
 
   const sendMessage = async (event) => {
     event.preventDefault();
-   
+
     const { uid, displayName, photoURL } = auth.currentUser;
     await addDoc(collection(db, "messages"), {
       text: message,
@@ -18,10 +19,12 @@ const SendMessage = ({ scroll }) => {
       uid,
     });
     setMessage("");
-    scroll.current.scrollIntoView({ behavior: "smooth" });
+    bottomRef.current.scrollIntoView({ behavior: "smooth" }); // scroll to the bottom reference
   };
+
   return (
-    <form onSubmit={(event) => sendMessage(event)} className="send-message">
+    <form onSubmit={sendMessage} className="send-message">
+
       <label htmlFor="messageInput" hidden>
         Enter Message
       </label>
@@ -30,12 +33,17 @@ const SendMessage = ({ scroll }) => {
         name="messageInput"
         type="text"
         className="form-input__input"
-        placeholder="type message..."
+        placeholder="Join the Discussion..."
         value={message}
         onChange={(e) => setMessage(e.target.value)}
       />
-      <button type="submit">Send</button>
+      <button className="send" type="submit">
+        Send
+      </button>
+      <div ref={bottomRef} /> {}
+      
     </form>
+    
   );
 };
 

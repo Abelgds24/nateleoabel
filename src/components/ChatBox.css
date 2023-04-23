@@ -1,0 +1,15 @@
+button {
+    position: absolute;
+    font-weight: bold;
+    font-size: 1rem;
+  
+    cursor: pointer;
+    padding: .1em .3em;
+    --c: #fff;
+    /* text color */
+    background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p,100%)/300% no-repeat,
+      whitesmoke;
+    border: none;
+    transition: 0.3s;
+    color: red;
+}

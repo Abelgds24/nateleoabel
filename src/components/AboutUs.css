@@ -1,0 +1,19 @@
+.blurb1 {
+    color: white;
+    font-size: 20px;
+}
+
+.listomega {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imgomega {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+footer {
+    text-align: center;
+}

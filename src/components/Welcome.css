@@ -21,9 +21,42 @@ height: 150px;
 text-align: center;
 display: flex;
 margin-left: 650px;
+transform: translateX(0px);
+animation: float 3s ease-out infinite;
+}
+
+
+.header {
+  background: linear-gradient(to right, #675D50, #ABC4AA, #F3DEBA, #A9907E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes header {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0px)
+  }
 }
 
 
 
+@keyframes float {
+  0%{
+    transform: translateY(0px);
+  }
 
+  50%{
+    transform: translateY(-60px);
+  }
+
+  100%{
+    transform: translateY(0px)
+  }
+}
 
